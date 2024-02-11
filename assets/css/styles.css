@@ -1,0 +1,11 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../fonts/jetbrains-mono/variable.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+}

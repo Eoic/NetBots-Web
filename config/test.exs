@@ -1,10 +1,20 @@
 import Config
 
+# Configure your database
+#
+# The MIX_TEST_PARTITION environment variable can be used
+# to provide built-in test partitioning in CI environment.
+# Run `mix help test` for more information.
+config :netbots, Netbots.Repo,
+  database: Path.expand("../netbots_test.db", Path.dirname(__ENV__.file)),
+  pool_size: 5,
+  pool: Ecto.Adapters.SQL.Sandbox
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :netbots, NetbotsWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "cMn+pgN5ROI/jEbOwYuRMBAf/7XTBg5AbBrxSV2QIukH3L0eDJBi62bH+fokJPe1",
+  secret_key_base: "F4VXBAvviYrN01LBD5eB6escQvseqYMaMnsFiUMi44Aw1V5jgh1zSgYGaU8r+U2x",
   server: false
 
 # In test we don't send emails.

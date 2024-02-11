@@ -8,6 +8,7 @@
 import Config
 
 config :netbots,
+  ecto_repos: [Netbots.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
@@ -19,7 +20,7 @@ config :netbots, NetbotsWeb.Endpoint,
     layout: false
   ],
   pubsub_server: Netbots.PubSub,
-  live_view: [signing_salt: "xM/0SpvK"]
+  live_view: [signing_salt: "CLkAoLA7"]
 
 # Configures the mailer
 #
@@ -35,22 +36,11 @@ config :esbuild,
   version: "0.17.11",
   netbots: [
     args:
-      ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+      ~w(js/main.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/* --external:/css/* --bundle css/styles.css),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 
-# Configure tailwind (the version is required)
-config :tailwind,
-  version: "3.4.0",
-  netbots: [
-    args: ~w(
-      --config=tailwind.config.js
-      --input=css/app.css
-      --output=../priv/static/assets/app.css
-    ),
-    cd: Path.expand("../assets", __DIR__)
-  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

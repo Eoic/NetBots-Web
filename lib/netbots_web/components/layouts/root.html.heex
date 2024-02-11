@@ -7,12 +7,12 @@
     <.live_title suffix=" · Multiplayer robot programming game">
     <%= assigns[:page_title] || "Netbots" %>
     </.live_title>
-    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <link phx-track-static rel="stylesheet" href={~p"/assets/css/styles.css"} />
     <script defer phx-track-static type="text/javascript"
-      src={~p"/assets/app.js"}>
+      src={~p"/assets/js/main.js"}>
     </script>
   </head>
-  <body class="antialiased">
+  <body class="bg-white antialiased">
     <%= @inner_content %>
   </body>
 </html>

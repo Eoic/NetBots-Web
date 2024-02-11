@@ -1,5 +1,12 @@
 import Config
 
+# Configure your database
+config :netbots, Netbots.Repo,
+  database: Path.expand("../netbots_dev.db", Path.dirname(__ENV__.file)),
+  pool_size: 5,
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -13,10 +20,9 @@ config :netbots, NetbotsWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "VsA9muL/AXEYc/gv8+BQ68CG09p2tDgFKMoCAU5AGwA9GHETzAPcknspj+sPDbKX",
+  secret_key_base: "V7RmJEgyJmLwsjRKfafsBGw5VG/O9DejfEkvVqdQlWDfLJkOEDn4BX7z3hFWfzU9",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:netbots, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:netbots, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:netbots, ~w(--sourcemap=inline --watch --loader:.ttf=file)]}
   ]
 
 # ## SSL Support

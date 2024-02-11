@@ -9,6 +9,10 @@ defmodule Netbots.Application do
   def start(_type, _args) do
     children = [
       NetbotsWeb.Telemetry,
+      Netbots.Repo,
+      {Ecto.Migrator,
+        repos: Application.fetch_env!(:netbots, :ecto_repos),
+        skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:netbots, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Netbots.PubSub},
       # Start the Finch HTTP client for sending emails
@@ -31,5 +35,10 @@ defmodule Netbots.Application do
   def config_change(changed, _new, removed) do
     NetbotsWeb.Endpoint.config_change(changed, removed)
     :ok
+  end
+
+  defp skip_migrations?() do
+    # By default, sqlite migrations are run when using a release
+    System.get_env("RELEASE_NAME") != nil
   end
 end

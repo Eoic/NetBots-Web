@@ -7,7 +7,7 @@ defmodule NetbotsWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_netbots_key",
-    signing_salt: "L0oKp4L9",
+    signing_salt: "b27ijxxy",
     same_site: "Lax"
   ]
 
@@ -31,6 +31,7 @@ defmodule NetbotsWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :netbots
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
