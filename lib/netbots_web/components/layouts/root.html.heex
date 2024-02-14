@@ -7,12 +7,19 @@
     <.live_title suffix=" · Multiplayer robot programming game">
     <%= assigns[:page_title] || "Netbots" %>
     </.live_title>
-    <link phx-track-static rel="stylesheet" href={~p"/assets/css/styles.css"} />
+    <link phx-track-static rel="stylesheet"
+      href={~p"/assets/css/styles.css"} />
+    <link rel="icon" type="image/png" sizes="32x32"
+      href={~p"/images/favicon/favicon-32x32.png"}>
+    <link rel="icon" type="image/png" sizes="16x16"
+      href={~p"/images/favicon/favicon-16x16.png"}>
     <script defer phx-track-static type="text/javascript"
       src={~p"/assets/js/main.js"}>
     </script>
   </head>
-  <body class="bg-white antialiased">
+  <body>
+    <%= NetbotsWeb.Layouts._navigation(assigns) %>
     <%= @inner_content %>
+    <%= NetbotsWeb.Layouts._footer(assigns) %>
   </body>
 </html>
