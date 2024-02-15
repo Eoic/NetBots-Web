@@ -1,17 +1,26 @@
 @import url('./reset.css');
 @import url('./colors.css');
+@import url('./variables.css');
 
 /* Components. */
 @import url('./components/nav.css');
 @import url('./components/header.css');
+@import url('./components/features.css');
+@import url('./components/footer.css');
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../fonts/jetbrains-mono/variable.ttf') format('truetype');
+    src: url('../fonts/jetbrains-mono/jetbrains-mono-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../fonts/audiowide/audiowide-regular.ttf') format('truetype');
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     font-size: 16px;
     font-family: 'JetBrains Mono', monospace;
+    background-color: var(--primary);
 }

@@ -2,19 +2,21 @@ nav.menu {
     width: 100%;
     display: block;
     position: fixed;
-    color: var(--text-on-primary);
+    color: var(--text-on-secondary);
+    background-color: var(--secondary);
 }
 
 nav.menu ul {
-    padding: 0;
+    width: 100%;
     display: flex;
+    margin: 0 auto;
     list-style: none;
     column-gap: 1.25em;
+    padding-inline: 5em;
+    padding-block: 1.5em;
     align-items: flex-end;
     justify-content: flex-end;
-    width: 100%;
-    padding-inline: 2.85em;
-    padding-block: 1em;
+    max-width: var(--content-width);
 }
 
 nav.menu ul li a {

@@ -1,0 +1,9 @@
+main.features {
+    display: grid;
+    background-color: var(--secondary);
+    color: var(--text-on-secondary);
+}
+
+main.features section {
+    
+}
