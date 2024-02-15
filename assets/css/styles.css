@@ -1,6 +1,10 @@
 @import url('./reset.css');
 @import url('./colors.css');
 
+/* Components. */
+@import url('./components/nav.css');
+@import url('./components/header.css');
+
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('../fonts/jetbrains-mono/variable.ttf') format('truetype');
@@ -10,29 +14,4 @@ body {
     margin: 0;
     font-size: 16px;
     font-family: 'JetBrains Mono', monospace;
-}
-
-/* Header */
-header.hero {
-    width: 100vw;
-    height: 100vh;
-    color: var(--text-on-primary);
-    background-color: var(--primary);
-    padding-inline: 5em;
-}
-
-header.hero h1 {
-    font-size: clamp(3em, 12vw, 6em);
-}
-
-header.hero h3 {
-    font-size: 1.5em;
-}
-
-header.hero p {
-    font-size: 1em;
-}
-
-header button.cta {
-    border-radius: 1rem;
 }

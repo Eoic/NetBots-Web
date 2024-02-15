@@ -1,0 +1,32 @@
+nav.menu {
+    width: 100%;
+    display: block;
+    position: fixed;
+    color: var(--text-on-primary);
+}
+
+nav.menu ul {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    column-gap: 1.25em;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    padding-inline: 2.85em;
+    padding-block: 1em;
+}
+
+nav.menu ul li a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    ;
+}
+
+nav.menu ul li a:hover {
+    color: #FFFFFA;
+    text-decoration-color: #FFFFFA;
+}

@@ -1,0 +1,59 @@
+header.hero {
+    width: 100vw;
+    height: 100vh;
+    color: var(--text-on-primary);
+    background-color: var(--primary);
+    padding-inline: 5em;
+    padding-block: 5em;
+}
+
+header.hero h1 {
+    font-size: clamp(3em, 12vw, 6em);
+}
+
+header.hero h3 {
+    font-size: 1.5em;
+}
+
+header.hero p {
+    font-size: 1em;
+}
+
+header div.ctas {
+    display: flex;
+    margin-top: 24px;
+    row-gap: 12px;
+    column-gap: 12px;
+    flex-wrap: wrap;
+}
+
+header button.cta {
+    font-size: 1.15rem;
+    border-radius: 2rem;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border-style: none;
+    transition: filter 0.2s ease-in-out;
+}
+
+header button.cta:hover {
+    filter: brightness(125%);
+}
+
+header button.cta:active {
+    filter: brightness(90%);
+}
+
+header button.cta:focus {
+    outline: #66639e solid 3px;
+}
+
+header button.cta.primary {
+    background-color: #4336DC;
+    color: var(--text-on-primary);
+}
+
+header button.cta.secondary {
+    background-color: var(--secondary);
+    color: var(--text-on-secondary);
+}

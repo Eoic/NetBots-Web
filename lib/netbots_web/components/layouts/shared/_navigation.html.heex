@@ -1,8 +1,8 @@
-<nav>
+<nav class="menu">
     <ul>
         <%= for item <- menu_items() do %>
         <li>
-            <%= item %>
+            <a href="#"> <%= item %> </a>
         </li>
         <% end %>
     </ul>
