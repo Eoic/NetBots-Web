@@ -36,7 +36,7 @@ config :esbuild,
   version: "0.17.11",
   netbots: [
     args:
-      ~w(js/main.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/* --external:/css/* --bundle css/styles.css),
+      ~w(js/main.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/* --external:/css/styles.css --bundle css/styles.css --minify),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]

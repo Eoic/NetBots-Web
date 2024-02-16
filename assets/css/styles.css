@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../fonts/jetbrains-mono/jetbrains-mono-regular.ttf') format('truetype');
+    src: url('/fonts/jetbrains-mono/jetbrains-mono-regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Audiowide';
-    src: url('../fonts/audiowide/audiowide-regular.ttf') format('truetype');
+    src: url('/fonts/audiowide/audiowide-regular.ttf') format('truetype');
 }
 
 body {

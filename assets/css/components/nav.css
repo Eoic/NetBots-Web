@@ -32,3 +32,68 @@ nav.menu ul li a:hover {
     color: #FFFFFA;
     text-decoration-color: #FFFFFA;
 }
+
+nav.menu>label[for="menu-toggle"] {
+    display: none;
+    padding: 2em;
+    cursor: pointer;
+    border-radius: 1em;
+    width: 1em;
+    height: 1em;
+    margin: 1em;
+    border: 1px solid var(--primary);
+    background-color: var(--secondary);
+    transition: filter 0.3s ease-in-out;
+}
+
+nav.menu>label[for="menu-toggle"]:hover {
+    filter: brightness(125%);
+}
+
+nav.menu>label[for="menu-toggle"]~input {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    nav.menu ul {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid var(--primary);
+    }
+
+    nav.menu ul li {
+        padding: 0;
+        width: 100%;
+    }
+
+    nav.menu ul li a {
+        width: 100%;
+        padding: 1em;
+        display: block;
+        text-decoration: none;
+        background-color: var(--secondary);
+        transition: filter 0.3s ease-in-out;
+    }
+
+
+    nav.menu ul li a:hover {
+        filter: brightness(125%);
+    }
+
+    nav.menu ul li a:active {
+        filter: brightness(95%);
+    }
+
+    nav.menu ul li.separator {
+        display: none;
+    }
+
+    nav.menu>label[for="menu-toggle"] {
+        display: inline-block;
+    }
+
+    nav.menu>label[for="menu-toggle"]~input:not(:checked)~ul li {
+        display: none;
+    }
+}
