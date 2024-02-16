@@ -1,9 +1,11 @@
 <nav class="menu">
     <ul>
-        <%= for item <- menu_items() do %>
-        <li>
-            <a href="#"> <%= item %> </a>
-        </li>
+        <%= for {item, index} <- Enum.with_index(menu_items()) do %>
+            <li><a href="#"><%= item %></a></li>
+
+            <%= if index < (length menu_items()) - 1 do %>
+                <li>/</li>
+            <% end %>
         <% end %>
     </ul>
 </nav>

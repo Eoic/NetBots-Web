@@ -1,13 +1,13 @@
 header.hero {
-    height: 100vh;
-    max-width: var(--content-width);
-    color: var(--text-on-primary);
-    padding-inline: 5em;
-    padding-block: 5em;
-    margin: 0 auto;
     display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    padding-block: 5em;
     flex-direction: column;
     justify-content: center;
+    color: var(--text-on-primary);
+    max-width: var(--content-width);
+    padding-inline: var(--content-inline-padding-desktop);
 }
 
 header.hero h1 {
@@ -59,4 +59,14 @@ header button.cta.primary {
 header button.cta.secondary {
     background-color: var(--secondary);
     color: var(--text-on-secondary);
+}
+
+@media (max-width: 576px) {
+    header.hero {
+        padding-inline: var(--content-inline-padding-mobile);
+    }
+
+    header button.cta {
+        width: 100%;
+    }
 }
