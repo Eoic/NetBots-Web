@@ -1,12 +1,11 @@
 <nav class="menu">
+    <input type="checkbox" id="menu-toggle">
+    
     <label for="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span menu-action="open" class="material-symbols-outlined">menu</span>
+        <span menu-action="close" class="material-symbols-outlined">close</span>
     </label>
     
-    <input type="checkbox" id="menu-toggle">
-
     <ul>
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
         <li><a href="#"><%= item %></a></li>

@@ -15,8 +15,8 @@ header.hero h1 {
     font-family: 'Audiowide', monospace;
 }
 
-header.hero h3 {
-    font-size: 1.5em;
+header.hero h2 {
+    font-size: clamp(1em, 7vw, 1.5em);
 }
 
 header.hero p {
