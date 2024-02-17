@@ -16,6 +16,11 @@ main.features section {
     max-width: var(--content-width);
 }
 
+main.features section svg {
+    margin: 0 auto;
+    max-height: 265px;
+}
+
 main.features section:first-child {
     padding-block-start: 0em;
 }
@@ -55,13 +60,17 @@ main.features section article ul {
 }
 
 @media (max-width: 1200px) {
-    main.features section h4 {
+    /* main.features section h4 {
         justify-content: center;
-    }
+    } */
 
     main.features section {
         justify-items: center;
         grid-template-columns: 1fr;
+    }
+
+    main.features section article ul {
+        padding-left: 20px;
     }
 
     main.features section:nth-child(even) article {

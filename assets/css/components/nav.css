@@ -1,5 +1,6 @@
 nav.menu {
     width: 100%;
+    z-index: 100;
     display: block;
     position: fixed;
     color: var(--text-on-secondary);
@@ -69,7 +70,6 @@ nav.menu>label[for="menu-toggle"]~input {
         padding: 0;
         flex-direction: column;
         align-items: flex-start;
-        /* border-top: 1px solid var(--primary); */
     }
 
     nav.menu ul li {
@@ -83,7 +83,7 @@ nav.menu>label[for="menu-toggle"]~input {
         padding: 1em;
         display: block;
         text-decoration: none;
-        background-color: var(--secondary);
+        background-color: #4436dc68;
         transition: filter 0.3s ease-in-out;
     }
 
