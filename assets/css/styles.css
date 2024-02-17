@@ -8,6 +8,7 @@
 @import url('./components/features.css');
 @import url('./components/footer.css');
 
+/* Fonts. */
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('/fonts/jetbrains-mono/jetbrains-mono-regular.ttf') format('truetype');
@@ -16,6 +17,16 @@
 @font-face {
     font-family: 'Audiowide';
     src: url('/fonts/audiowide/audiowide-regular.ttf') format('truetype');
+}
+
+/* Icons. */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    font-size: 1.25em !important;
 }
 
 body {

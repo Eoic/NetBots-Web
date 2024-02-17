@@ -7,13 +7,13 @@ main.features {
 }
 
 main.features section {
-    max-width: var(--content-width);
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
     column-gap: 5em;
-    align-items: end;
     padding-block: 1em;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    max-width: var(--content-width);
 }
 
 main.features section:first-child {
@@ -22,6 +22,10 @@ main.features section:first-child {
 
 main.features section:last-child {
     padding-block-end: 0em;
+}
+
+main.features section:nth-child(odd) article {
+    width: 100%;
 }
 
 main.features section:nth-child(odd) article {
@@ -35,6 +39,13 @@ main.features section:nth-child(even) article {
 main.features section h4 {
     margin: 0;
     font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.25em;
+}
+
+main.features section article ul {
+    list-style-type: square;
 }
 
 @media (max-width: 576px) {
@@ -45,7 +56,7 @@ main.features section h4 {
 
 @media (max-width: 1200px) {
     main.features section h4 {
-        text-align: center;
+        justify-content: center;
     }
 
     main.features section {
