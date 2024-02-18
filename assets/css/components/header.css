@@ -31,32 +31,33 @@ header div.ctas {
     flex-wrap: wrap;
 }
 
-header button.cta {
+header a.cta {
     font-size: 1.15rem;
     padding-block: 0.5em;
     padding-inline: 1em;
     border-style: none;
+    text-decoration: none;
     transition: filter 0.2s ease-in-out;
 }
 
-header button.cta:hover {
+header a.cta:hover {
     filter: brightness(125%);
 }
 
-header button.cta:active {
+header a.cta:active {
     filter: brightness(90%);
 }
 
-header button.cta:focus {
+header a.cta:focus {
     outline: #66639e solid 3px;
 }
 
-header button.cta.primary {
+header a.cta.primary {
     background-color: #4336DC;
     color: var(--text-on-primary);
 }
 
-header button.cta.secondary {
+header a.cta.secondary {
     background-color: var(--secondary);
     color: var(--text-on-secondary);
 }
@@ -66,7 +67,7 @@ header button.cta.secondary {
         padding-inline: var(--content-inline-padding-mobile);
     }
 
-    header button.cta {
+    header a.cta {
         width: 100%;
     }
 }

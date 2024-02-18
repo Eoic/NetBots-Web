@@ -1,6 +1,7 @@
 footer {
     color: var(--text-on-primary);
     background-color: var(--primary);
+    border-top: 1px solid var(--secondary);
     text-align: center;
     padding-block: 1em;
     flex: 0 1 auto;
