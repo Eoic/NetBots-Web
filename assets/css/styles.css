@@ -6,6 +6,7 @@
 @import url('./components/nav.css');
 @import url('./components/header.css');
 @import url('./components/features.css');
+@import url('./components/docs.css');
 @import url('./components/footer.css');
 
 /* Fonts. */
@@ -30,11 +31,20 @@
 }
 
 html {
+    scroll-behavior: smooth;
     scroll-padding-top: 1.8rem;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     font-family: 'JetBrains Mono', monospace;
     background-color: var(--primary);

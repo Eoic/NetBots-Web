@@ -3,4 +3,5 @@ footer {
     background-color: var(--primary);
     text-align: center;
     padding-block: 1em;
+    flex: 0 1 auto;
 }

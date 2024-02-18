@@ -18,6 +18,7 @@ defmodule NetbotsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/docs", DocsController, :index
   end
 
   # Other scopes may use custom stacks.
