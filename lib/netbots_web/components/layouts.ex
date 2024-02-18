@@ -6,10 +6,10 @@ defmodule NetbotsWeb.Layouts do
 
   def menu_items() do
     [
-      "Features",
-      "Documentation",
-      "Login",
-      "Register"
+      %{href: "#features", title: "Features"},
+      %{href: "/docs", title: "Documentation"},
+      %{href: "/login", title: "Login"},
+      %{href: "/register", title: "Register"},
     ]
   end
 end

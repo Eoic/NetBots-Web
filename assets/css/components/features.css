@@ -47,6 +47,7 @@ main.features section h3 {
     display: flex;
     align-items: center;
     column-gap: 0.25em;
+    font-family: 'Audiowide', 'JetBrains Mono', monospace;
 }
 
 main.features section article ul {

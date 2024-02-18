@@ -34,16 +34,16 @@ nav.menu ul li a:hover {
 }
 
 nav.menu>label[for="menu-toggle"] {
-    width: 4em;
-    height: 4em;
-    margin: 0.75em;
+    width: 3em;
+    height: 3em;
     float: right;
     display: none;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
     border-radius: 1em;
+    align-items: center;
+    margin: 0.75em 0.75em;
     flex-direction: column;
+    justify-content: center;
     border: 1px solid var(--primary);
     background-color: var(--secondary);
     transition: filter 0.3s ease-in-out;
@@ -54,7 +54,7 @@ nav.menu>label[for="menu-toggle"]:hover {
 }
 
 nav.menu>label[for="menu-toggle"] span {
-    font-size: 3.5em !important;
+    font-size: 2.5em !important;
     user-select: none;
 
 }

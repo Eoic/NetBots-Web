@@ -5,10 +5,12 @@
         <span menu-action="open" class="material-symbols-outlined">menu</span>
         <span menu-action="close" class="material-symbols-outlined">close</span>
     </label>
-    
+
     <ul>
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
-        <li><a href="#"><%= item %></a></li>
+            <li>
+                <a href={Map.get(item, :href, "#")}><%= Map.get(item, :title) %></a>
+            </li>
             <%= if index < (length menu_items()) - 1 do %>
                 <li class="separator">/</li>
             <% end %>
