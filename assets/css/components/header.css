@@ -11,6 +11,7 @@ header.hero {
 }
 
 header.hero h1 {
+    line-height: 155%;
     font-size: clamp(3em, 10vw, 5em);
     font-family: 'Audiowide', monospace;
 }
@@ -38,6 +39,9 @@ header a.cta {
     border-style: none;
     text-decoration: none;
     transition: filter 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    column-gap: 0.25em;
 }
 
 header a.cta:hover {

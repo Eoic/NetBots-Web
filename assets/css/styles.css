@@ -58,3 +58,12 @@ body {
     font-family: 'JetBrains Mono', monospace;
     background-color: var(--primary);
 }
+
+/* Slogan animation. */
+.slogan-word {
+    position: relative;
+    border-radius: 0.1em;
+    padding-block: 0.1em;
+    padding-inline: 0.1em;
+    background-color: var(--secondary);
+}
