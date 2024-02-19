@@ -7,6 +7,10 @@
     </label>
 
     <ul>
+        <li class="brand">
+            <a href="/"></a>
+        </li>
+
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
             <li>
                 <a href={Map.get(item, :href, "#")}><%= Map.get(item, :title) %></a>

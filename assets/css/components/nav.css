@@ -63,7 +63,44 @@ nav.menu>input[type="checkbox"] {
     display: none;
 }
 
+@media (min-width: 576px) {
+    nav.menu ul li.brand {
+        flex-grow: 1;
+    }
+
+    nav.menu ul li.brand a {
+        text-decoration: none;
+        text-decoration-color: transparent;
+    }
+
+    nav.menu ul li.brand a::before {
+        content: ">_ NetBots";
+        text-transform: uppercase;
+        font-family: 'Audiowide';
+        padding: 2px 6px;
+        background-color: #bfcde0;
+        border-radius: 4px;
+        color: var(--secondary);
+        margin-right: 0.5rem;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    nav.menu ul li.brand a:hover::before {
+        background-color: #FFFFFF;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.menu ul li.brand a::before {
+        content: ">_";
+    }
+}
+
 @media (max-width: 576px) {
+    nav.menu ul li.brand a::before {
+        content: "Home";
+    }
+
     nav.menu ul {
         padding: 0;
         flex-direction: column;

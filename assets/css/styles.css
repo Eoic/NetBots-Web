@@ -1,3 +1,12 @@
+/*
+    X-Small 	        < 576px
+    Small 	            ≥ 576px
+    Medium 	            ≥ 768px
+    Large 	            ≥ 992px
+    Extra large 	    ≥ 1200px
+    Extra extra large 	≥ 1400px
+*/
+
 @import url('./reset.css');
 @import url('./colors.css');
 @import url('./variables.css');
