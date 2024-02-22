@@ -8,7 +8,7 @@ defmodule Netbots.Accounts.UserNotifier do
     email =
       new()
       |> to(recipient)
-      |> from({"Netbots", "contact@example.com"})
+      |> from({"Netbots", "noreply@netbots.io"})
       |> subject(subject)
       |> text_body(body)
 

@@ -13,7 +13,9 @@
 
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
             <li>
-                <a href={Map.get(item, :href, "#")}><%= Map.get(item, :title) %></a>
+                <.link href={Map.get(item, :href)}>
+                    <%= Map.get(item, :title) %>
+                </.link>
             </li>
             <%= if index < (length menu_items()) - 1 do %>
                 <li class="separator">/</li>
