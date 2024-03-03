@@ -13,7 +13,7 @@
 
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
             <li>
-                <.link href={Map.get(item, :href)}>
+                <.link navigate={Map.get(item, :href)}>
                     <%= Map.get(item, :title) %>
                 </.link>
             </li>

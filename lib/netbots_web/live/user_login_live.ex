@@ -21,9 +21,9 @@ defmodule NetbotsWeb.UserLoginLive do
 
         <:actions>
           <.input field={@form[:remember_me]} type="checkbox" label="Keep me logged in" />
-          <.link href={~p"/users/reset_password"}x>
+          <%!-- <.link href={~p"/users/reset_password"}x>
             Forgot your password?
-          </.link>
+          </.link> --%>
         </:actions>
         <:actions>
           <.button phx-disable-with="Signing in...">
@@ -38,6 +38,6 @@ defmodule NetbotsWeb.UserLoginLive do
   def mount(_params, _session, socket) do
     email = live_flash(socket.assigns.flash, :email)
     form = to_form(%{"email" => email}, as: "user")
-    {:ok, assign(socket, form: form), temporary_assigns: [form: form]}
+    {:ok, assign(socket, form: form, page_title: "Login"), temporary_assigns: [form: form]}
   end
 end

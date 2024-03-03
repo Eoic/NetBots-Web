@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <meta name="description"
-      content="Code battle tanks and compete with others from around the world in real time multiplayer battles.">
-    <.live_title suffix=" · Multiplayer battle tank programming game">
-    <%= assigns[:page_title] || "Netbots" %>
+    <meta name="description" content="Code battle tanks and compete with others from around the world in real time multiplayer battles.">
+    <.live_title prefix="NetBots · ">
+      <%= assigns[:page_title] || "Multiplayer battle tank programming game" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/css/styles.css"} />
     <link rel="icon" type="image/png" sizes="32x32"
@@ -25,50 +24,6 @@
   </head>
 
   <body>
-    <!--
-    <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
-      <%= if @current_user do %>
-        <li class="text-[0.8125rem] leading-6 text-zinc-900">
-          <%= @current_user.email %>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/settings"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
-          >
-            Settings
-          </.link>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/log_out"}
-            method="delete"
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
-          >
-            Log out
-          </.link>
-        </li>
-      <% else %>
-        <li>
-          <.link
-            href={~p"/users/register"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
-          >
-            Register
-          </.link>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/log_in"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
-          >
-            Log in
-          </.link>
-        </li>
-      <% end %>
-    </ul>
-  -->
-
     <%= NetbotsWeb.Layouts._navigation(assigns) %>
     <%= @inner_content %>
     <%= NetbotsWeb.Layouts._footer(assigns) %>

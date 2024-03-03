@@ -21,7 +21,6 @@ defmodule NetbotsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/docs", DocsController, :index
   end
 
   # Other scopes may use custom stacks.
@@ -74,7 +73,6 @@ defmodule NetbotsWeb.Router do
 
   scope "/", NetbotsWeb do
     pipe_through [:browser]
-
     delete "/users/log_out", UserSessionController, :delete
 
     live_session :current_user,
