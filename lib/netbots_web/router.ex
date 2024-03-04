@@ -20,7 +20,7 @@ defmodule NetbotsWeb.Router do
   scope "/", NetbotsWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
@@ -45,13 +45,12 @@ defmodule NetbotsWeb.Router do
     end
   end
 
-  ## Authentication routes
-
   scope "/", NetbotsWeb do
     pipe_through [:browser, :redirect_if_user_is_authenticated]
 
     live_session :redirect_if_user_is_authenticated,
       on_mount: [{NetbotsWeb.UserAuth, :redirect_if_user_is_authenticated}] do
+      live "/", LandingLive
       live "/users/register", UserRegistrationLive, :new
       live "/users/log_in", UserLoginLive, :new
       live "/users/reset_password", UserForgotPasswordLive, :new

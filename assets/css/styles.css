@@ -68,7 +68,7 @@ body {
     background-color: var(--secondary);
 }
 
-.content {
+.phx-connected {
     flex: 1 1 auto;
     margin-top: 4.5rem;
 }
