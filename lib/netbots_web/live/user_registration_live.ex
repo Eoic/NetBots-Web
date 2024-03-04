@@ -75,6 +75,8 @@ defmodule NetbotsWeb.UserRegistrationLive do
     {:noreply, assign_form(socket, Map.put(changeset, :action, :validate))}
   end
 
+  def handle_params(_unsigned_params, uri, socket), do: {:noreply, assign(socket, uri: URI.parse(uri))}
+
   defp assign_form(socket, %Ecto.Changeset{} = changeset) do
     form = to_form(changeset, as: "user")
 

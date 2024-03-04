@@ -7,12 +7,12 @@
     </label>
 
     <ul>
-        <li class="brand">
+        <li class={["brand"] ++ [(if @uri.path == "/", do: "active", else: "")]}>
             <.link navigate={~p"/"}></.link>
         </li>
 
         <%= for {item, index} <- Enum.with_index(menu_items()) do %>
-            <li>
+            <li class={if @uri.path == Map.get(item, :href), do: "active", else: ""}>
                 <.link navigate={Map.get(item, :href)}>
                     <%= Map.get(item, :title) %>
                 </.link>

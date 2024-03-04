@@ -4,16 +4,17 @@ defmodule NetbotsWeb.LandingLive do
   @slogan_switch_timeout_ms 1500
 
   @slogan_word_pool [
-    ~c"coding",
-    ~c"thinking",
-    ~c"planning",
-    ~c"designing"
+    ~c"Play by coding",
+    ~c"Design algorithms",
+    ~c"Solve puzzles",
+    ~c"Sharpen coding skills",
+    ~c"Have fun",
   ]
 
   def render(assigns) do
     ~H"""
     <header class="hero">
-      <h1> Play by <span class="slogan-word"><%= @slogan_word %></span></h1>
+      <h1> <span class="slogan-word"><%= @slogan_word %></span></h1>
       <h2> Multiplayer battle tank programming game. </h2>
       <p> Improve your programming skills, design algorithms and compete with
         players worldwide in real-time multiplayer battles. </p>
@@ -121,6 +122,8 @@ defmodule NetbotsWeb.LandingLive do
     """
   end
 
+  def handle_params(_unsigned_params, uri, socket), do: {:noreply, assign(socket, uri: URI.parse(uri))}
+
   def mount(_params, _session, socket) do
     if connected?(socket) do
       # TODO: Should stop interval on unmount.
@@ -132,6 +135,7 @@ defmodule NetbotsWeb.LandingLive do
       :ok,
       assign(
         socket,
+        path: "/",
         slogan_word_index: 0,
         slogan_word: Enum.at(@slogan_word_pool, 0),
         page_title: "Multiplayer battle tank programming game"

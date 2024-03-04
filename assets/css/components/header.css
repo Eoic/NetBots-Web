@@ -1,6 +1,5 @@
 header.hero {
     display: flex;
-    height: 100vh;
     margin: 0 auto;
     padding-block: 5em;
     flex-direction: column;

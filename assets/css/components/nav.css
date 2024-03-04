@@ -6,6 +6,7 @@ nav.menu {
     color: var(--text-on-secondary);
     background-color: var(--secondary);
     border-bottom: 1px solid var(--primary);
+    min-height: 5rem;
 }
 
 nav.menu ul {
@@ -24,13 +25,17 @@ nav.menu ul {
 nav.menu ul li a {
     text-decoration: underline;
     text-decoration-color: transparent;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-    transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* text-underline-offset: 4px; */
+    /* text-decoration-thickness: 2px; */
+    /* transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out; */
+}
+
+nav.menu ul li.active a {
+    font-weight: bold;
 }
 
 nav.menu ul li a:hover {
-    text-decoration-color: #FFFFFA;
+    /* text-decoration-color: #FFFFFA; */
 }
 
 nav.menu>label[for="menu-toggle"] {
@@ -39,7 +44,6 @@ nav.menu>label[for="menu-toggle"] {
     float: right;
     display: none;
     cursor: pointer;
-    border-radius: 1em;
     align-items: center;
     margin: 0.75em 0.75em;
     flex-direction: column;
@@ -66,6 +70,7 @@ nav.menu>input[type="checkbox"] {
 @media (min-width: 576px) {
     nav.menu ul li.brand {
         flex-grow: 1;
+        font-weight: bold;
     }
 
     nav.menu ul li.brand a {
@@ -128,6 +133,11 @@ nav.menu>input[type="checkbox"] {
 
     nav.menu ul li a:active {
         filter: brightness(95%);
+    }
+
+    nav.menu ul li.active a {
+        text-decoration: none;
+        background-color: #4336DC;
     }
 
     nav.menu ul li.separator {

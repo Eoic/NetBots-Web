@@ -35,6 +35,8 @@ defmodule NetbotsWeb.UserLoginLive do
     """
   end
 
+  def handle_params(_unsigned_params, uri, socket), do: {:noreply, assign(socket, uri: URI.parse(uri))}
+
   def mount(_params, _session, socket) do
     email = live_flash(socket.assigns.flash, :email)
     form = to_form(%{"email" => email}, as: "user")
