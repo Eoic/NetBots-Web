@@ -59,16 +59,9 @@ body {
     background-color: var(--primary);
 }
 
-/* Slogan animation. */
-.slogan-word {
+h1.slogan {
     position: relative;
-    border-radius: 0.1em;
     padding-block: 0.1em;
     padding-inline: 0.1em;
     background-color: var(--secondary);
 }
-
-/* .phx-connected {
-    flex: 1 1 auto;
-    margin-top: 4.5rem;
-} */

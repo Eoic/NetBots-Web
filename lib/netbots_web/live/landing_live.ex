@@ -8,13 +8,13 @@ defmodule NetbotsWeb.LandingLive do
     ~c"Design algorithms",
     ~c"Solve puzzles",
     ~c"Sharpen coding skills",
-    ~c"Have fun",
+    ~c"Have fun"
   ]
 
   def render(assigns) do
     ~H"""
     <header class="hero">
-      <h1> <span class="slogan-word"><%= @slogan_word %></span></h1>
+      <h1 class="slogan"> <%= @slogan_word %> </h1>
       <h2> Multiplayer battle tank programming game. </h2>
       <p> Improve your programming skills, design algorithms and compete with
         players worldwide in real-time multiplayer battles. </p>
@@ -122,7 +122,8 @@ defmodule NetbotsWeb.LandingLive do
     """
   end
 
-  def handle_params(_unsigned_params, uri, socket), do: {:noreply, assign(socket, uri: URI.parse(uri))}
+  def handle_params(_unsigned_params, uri, socket),
+    do: {:noreply, assign(socket, uri: URI.parse(uri))}
 
   def mount(_params, _session, socket) do
     if connected?(socket) do

@@ -23,15 +23,18 @@ nav.menu ul {
 }
 
 nav.menu ul li a {
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    /* text-underline-offset: 4px; */
-    /* text-decoration-thickness: 2px; */
-    /* transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out; */
+    padding: 4px 8px;
+    text-decoration: none;
 }
 
-nav.menu ul li.active a {
+nav.menu ul li.brand a {
+    padding-left: 0;
+}
+
+nav.menu ul li.active:not(.brand) a {
     font-weight: bold;
+    color: var(--secondary);
+    background-color: var(--text-on-secondary);
 }
 
 nav.menu ul li a:hover {
@@ -84,7 +87,6 @@ nav.menu>input[type="checkbox"] {
         font-family: 'Audiowide';
         padding: 2px 6px;
         background-color: #bfcde0;
-        border-radius: 4px;
         color: var(--secondary);
         margin-right: 0.5rem;
         transition: background-color 0.3s ease-in-out;
@@ -102,6 +104,10 @@ nav.menu>input[type="checkbox"] {
 }
 
 @media (max-width: 576px) {
+    nav.menu ul li.brand a {
+        padding-left: 1em;
+    }
+
     nav.menu ul li.brand a::before {
         content: "Home";
     }
@@ -136,8 +142,9 @@ nav.menu>input[type="checkbox"] {
     }
 
     nav.menu ul li.active a {
-        text-decoration: none;
-        background-color: #4336DC;
+        font-weight: bold;
+        color: var(--secondary);
+        background-color: var(--text-on-primary);
     }
 
     nav.menu ul li.separator {
