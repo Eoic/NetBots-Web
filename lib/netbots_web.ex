@@ -52,7 +52,8 @@ defmodule NetbotsWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {NetbotsWeb.Layouts, :app}
+        layout: {NetbotsWeb.Layouts, :app},
+        container: {:div, class: "liveview-container"}
 
       unquote(html_helpers())
     end

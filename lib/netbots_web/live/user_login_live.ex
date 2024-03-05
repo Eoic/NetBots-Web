@@ -4,16 +4,16 @@ defmodule NetbotsWeb.UserLoginLive do
   def render(assigns) do
     ~H"""
     <div>
-      <.header>
+      <div class="login">
         Sign in to account
-        <:subtitle>
+        <div>
           Don't have an account?
           <.link navigate={~p"/users/register"}>
             Sign up
           </.link>
           for an account now.
-        </:subtitle>
-      </.header>
+        </div>
+      </div>
 
       <.simple_form for={@form} id="login_form" action={~p"/users/log_in"} phx-update="ignore">
         <.input field={@form[:email]} type="email" label="Email" required />

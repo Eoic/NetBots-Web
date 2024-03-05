@@ -65,3 +65,16 @@ h1.slogan {
     padding-inline: 0.1em;
     background-color: var(--secondary);
 }
+
+/* --- LiveView fix. --- */
+div.liveview-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+
+.login {
+    display: flex;
+    margin-top: 5rem;
+}
