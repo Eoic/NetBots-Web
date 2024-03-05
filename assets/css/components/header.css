@@ -10,6 +10,7 @@ header.hero {
 }
 
 header.hero h1 {
+    margin-top: 5rem;
     line-height: 155%;
     padding-inline: 0.5em;
     font-size: clamp(2em, 10vw, 4em);

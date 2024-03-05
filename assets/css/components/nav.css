@@ -25,6 +25,15 @@ nav.menu ul {
 nav.menu ul li a {
     padding: 4px 8px;
     text-decoration: none;
+    transition: filter 0.25s ease-in-out;
+}
+
+nav.menu ul li:not(.active) a:hover {
+    filter: brightness(125%);
+}
+
+nav.menu ul li:not(.active) a:active {
+    filter: brightness(95%);
 }
 
 nav.menu ul li.brand a {
@@ -35,10 +44,6 @@ nav.menu ul li.active:not(.brand) a {
     font-weight: bold;
     color: var(--secondary);
     background-color: var(--text-on-secondary);
-}
-
-nav.menu ul li a:hover {
-    /* text-decoration-color: #FFFFFA; */
 }
 
 nav.menu>label[for="menu-toggle"] {
@@ -129,16 +134,8 @@ nav.menu>input[type="checkbox"] {
         padding: 1em;
         display: block;
         text-decoration: none;
-        background-color: #4436dc68;
+        background-color: #434162;
         transition: filter 0.3s ease-in-out;
-    }
-
-    nav.menu ul li a:hover {
-        filter: brightness(125%);
-    }
-
-    nav.menu ul li a:active {
-        filter: brightness(95%);
     }
 
     nav.menu ul li.active a {
