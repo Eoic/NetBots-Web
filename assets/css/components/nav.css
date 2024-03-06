@@ -3,10 +3,10 @@ nav.menu {
     z-index: 100;
     display: block;
     position: fixed;
+    min-height: var(--navbar-height);
     color: var(--text-on-secondary);
     background-color: var(--secondary);
     border-bottom: 1px solid var(--primary);
-    min-height: 5rem;
 }
 
 nav.menu ul {
@@ -16,14 +16,14 @@ nav.menu ul {
     list-style: none;
     column-gap: 0.75em;
     padding-inline: 5em;
-    padding-block: 1.5em;
+    padding-block: 1.75em;
     align-items: flex-end;
     justify-content: flex-end;
     max-width: var(--content-width);
 }
 
 nav.menu ul li a {
-    padding: 4px 8px;
+    padding-inline: 6px;
     text-decoration: none;
     transition: filter 0.25s ease-in-out;
 }

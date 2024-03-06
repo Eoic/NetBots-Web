@@ -41,7 +41,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1.8rem;
+    scroll-padding-top: 2.25rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -73,8 +73,18 @@ div.liveview-container {
     flex-direction: column;
 }
 
-
-.login {
+div.container {
+    width: 100%;
     display: flex;
-    margin-top: 5rem;
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: var(--content-width);
+    margin: var(--navbar-height) auto;
+    padding-inline: var(--content-inline-padding-desktop);
+}
+
+@media (max-width: 576px) {
+    div.container {
+        padding-inline: var(--content-inline-padding-mobile);
+    }
 }

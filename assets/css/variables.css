@@ -1,5 +1,6 @@
 :root {
     --content-width: 1200px;
-    --content-inline-padding-desktop: 5em;
-    --content-inline-padding-mobile: 1.25em;
+    --navbar-height: 5rem;
+    --content-inline-padding-desktop: 5rem;
+    --content-inline-padding-mobile: 1.25rem;
 }

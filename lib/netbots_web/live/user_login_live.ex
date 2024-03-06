@@ -3,8 +3,8 @@ defmodule NetbotsWeb.UserLoginLive do
 
   def render(assigns) do
     ~H"""
-    <div>
-      <div class="login">
+    <div class="container">
+      <%!-- <div>
         Sign in to account
         <div>
           Don't have an account?
@@ -13,9 +13,9 @@ defmodule NetbotsWeb.UserLoginLive do
           </.link>
           for an account now.
         </div>
-      </div>
+      </div> --%>
 
-      <.simple_form for={@form} id="login_form" action={~p"/users/log_in"} phx-update="ignore">
+      <.simple_form for={@form} id="login_form" action={~p"/users/log_in"} class="form" phx-update="ignore">
         <.input field={@form[:email]} type="email" label="Email" required />
         <.input field={@form[:password]} type="password" label="Password" required />
 
@@ -35,7 +35,8 @@ defmodule NetbotsWeb.UserLoginLive do
     """
   end
 
-  def handle_params(_unsigned_params, uri, socket), do: {:noreply, assign(socket, uri: URI.parse(uri))}
+  def handle_params(_unsigned_params, uri, socket),
+    do: {:noreply, assign(socket, uri: URI.parse(uri))}
 
   def mount(_params, _session, socket) do
     email = live_flash(socket.assigns.flash, :email)
